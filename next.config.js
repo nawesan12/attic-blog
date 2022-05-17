@@ -4,6 +4,9 @@ const nextConfig = {
   i18n: {
     locales: ['es', 'en'],
     defaultLocale: 'es'
+  },
+  images: {
+    domains: ['picsum.photos']
   }
 }
 
