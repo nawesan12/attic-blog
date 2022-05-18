@@ -10,8 +10,11 @@ export default function BlogsContainer({ posts }) {
                     <Link href={`/blog/${post.slug}`} key={index} passHref><a>
                         <article className="blog-card">
                             <section className="blog-description">
-                                <h3>{post.frontMatter.title}</h3>
-                                <p>{post.frontMatter.description}</p>
+                                <header>
+                                    <h3>{post.frontMatter.title}</h3>
+                                    <p>{post.frontMatter.description}</p>
+                                </header>
+                                <p className='date'>{post.frontMatter.date}</p>
                             </section>
                             <section className="image-container">
                                 <Image src={post.frontMatter.thumbnailUrl} alt={post.frontMatter.title} objectFit='cover' layout='fill'/>
@@ -41,12 +44,20 @@ export default function BlogsContainer({ posts }) {
                 }    
 
                 .blog-description {
+                    display:grid;
+                    grid-template-rows: 1fr 2rem;
                     padding:.5rem;
                 }
 
                 .blog-description p {
                     padding-block: .75rem;
                     opacity:.8;
+                }
+
+                .blog-description .date {
+                    grid-row: 2 / 3;
+                    font-size: .75rem;
+                    opacity: .7;
                 }
 
                 .image-container {
