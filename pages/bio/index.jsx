@@ -1,9 +1,16 @@
 export default function Bio() {
     return (
         <>
-        Bio page
+        <section className="bio-page">
+            Bio page
+        </section>
 
-        <p>This is a bio</p>
+        <style jsx>{`
+            .bio-page {
+                min-height:100vh;
+                text-align:center;
+            }
+        `}</style>
         </>
     )
 }

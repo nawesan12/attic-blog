@@ -16,6 +16,16 @@ export default function Home({posts}) {
       </Head>      
 
       <BlogsContainer posts={posts} />
+      <button 
+        onClick={() => document.body.classList.toggle('dark-mode')}
+        style={{
+          padding:'1rem',
+          display:'block',
+          margin:'2rem auto',
+        }}
+      >
+        HOLAAAAAAAAAAAAAAA
+      </button>
     </>
   )
 }
